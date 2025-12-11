@@ -22,7 +22,7 @@ export const LivePreview: React.FC<LivePreviewProps> = ({ previews, totalCommiss
                     <p className="text-2xl font-bold text-emerald-600">NT$ {totalCommission.toLocaleString()}</p>
                 </div>
                 <div className="text-right">
-                    <p className="text-slate-400 text-xs">每月平均</p>
+                    <p className="text-slate-400 text-xs">每月約</p>
                     <p className="text-sm font-medium text-slate-600">~NT$ {(totalCommission / duration).toFixed(0)}</p>
                 </div>
             </div>
