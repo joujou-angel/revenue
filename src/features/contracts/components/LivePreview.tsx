@@ -23,7 +23,7 @@ export const LivePreview: React.FC<LivePreviewProps> = ({ previews, totalCommiss
                 </div>
                 <div className="text-right">
                     <p className="text-slate-400 text-xs">每月約</p>
-                    <p className="text-sm font-medium text-slate-600">~NT$ {(totalCommission / duration).toFixed(0)}</p>
+                    <p className="text-sm font-medium text-slate-600">NT$ {(totalCommission / duration).toFixed(0)}</p>
                 </div>
             </div>
 
