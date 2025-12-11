@@ -27,7 +27,9 @@ export default defineConfig([
       tseslint.configs.recommendedTypeChecked,
       // Alternatively, use this for stricter rules
       tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
+      // Optionally, add# Commission Intelligence System (v3.1)
+
+> **Deployment Status**: Verified Clean Build (v3.1)
       tseslint.configs.stylisticTypeChecked,
 
       // Other configs...
