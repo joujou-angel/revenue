@@ -8,6 +8,10 @@ export type Client = {
     note: string | null;
     id_number: string | null;
     created_at: string;
+    contracts: {
+        id: string;
+        status: 'active' | 'terminated' | 'completed';
+    }[];
 };
 
 export const useClients = () => {
@@ -20,7 +24,7 @@ export const useClients = () => {
             setLoading(true);
             const { data, error } = await supabase
                 .from('clients')
-                .select('*')
+                .select('*, contracts(id, status)')
                 .order('created_at', { ascending: false });
 
             if (error) throw error;
