@@ -1,0 +1,38 @@
+import React from 'react';
+
+export const BrandLogo: React.FC<{ className?: string }> = ({ className }) => {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 500 500"
+            className={className}
+            fill="none" // Ensure fill is handled by paths
+        >
+            <title>IJou Organic Rough Handwriting</title>
+            <desc>A casual, organic handwritten logo for "I jou" with purposeful imperfections to avoid a rigid look.</desc>
+
+            <path fill="#d4c4b8" d="M387.5,136.2c-41.9-53.4-110.9-72.6-174.4-58c-68.6,15.8-128.2,72.9-143.7,146.3
+            c-14.5,68.6,10.3,144.3,66.7,188.2c53.4,41.6,127.6,49.8,189.1,26.1c58.7-22.7,106.6-73.5,123.4-136.9
+            C463.4,246.7,434.6,196.3,387.5,136.2z"/>
+
+            <g fill="none" stroke="#faf8f5" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round">
+
+                <path d="M130,185 Q150,182 170,180" />
+                <path d="M150,182 Q155,230 148,275" />
+                <path d="M135,275 Q150,278 165,275" />
+
+                <path d="M230,220 Q235,300 230,320 Q220,360 190,350" />
+                <path d="M235,185 L236,186" strokeWidth="14" />
+
+                <path d="M305,240 
+                        Q275,235 275,270 
+                        Q275,300 305,300 
+                        Q330,300 325,270 
+                        Q322,255 310,250" />
+
+                <path d="M355,250 Q355,300 380,300 Q400,300 400,260 M400,260 L400,305" />
+
+            </g>
+        </svg>
+    );
+};
