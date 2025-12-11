@@ -29,6 +29,7 @@
 - `user_id` (uuid, FK): 資料擁有者
 - `name` (text): 客戶姓名
 - `phone` (text): 聯絡電話
+- `contracts` (relation): 關聯之合約 (用於判斷客戶狀態)
 - `created_at` (timestamptz)
 
 #### `contracts` (合約主檔)
@@ -104,6 +105,12 @@
 
 ### D. 合約與客戶管理
 - **客戶詳情**: 整合顯示該客戶的所有合約歷史。
+- **客戶分類 (Customer Classification)**:
+  - **活躍客戶 (Active)**: 擁有至少一份進行中 (`status = active`) 的合約。
+  - **待開發客戶 (Prospective)**: 目前無合約，或所有合約皆已終止/結束。
+  - **UI**: 透過 Tabs 分頁切換，並以顏色 (綠/藍) 區分狀態。
+- **合約列表 (Contracts)**:
+  - **Tabs 切換**: 支援 **「進行中」** 與 **「全部」** 合約切換，提升管理效率。
 - **刪除保護**: 刪除客戶或合約時，必須經過雙重確認 (Confirmation Modal)，並自動連動刪除相關帳務 (Cascade Delete)。
 
 ---
